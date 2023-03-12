@@ -1,51 +1,41 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "jest/globals": true,
-    "cypress/globals": true,
-    "node": true
-  },
-  "extends": [
-    "next",
-    "next/core-web-vitals",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:testing-library/react",
-    "plugin:cypress/recommended",
-    "plugin:prettier/recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier"
-  ],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
+  "compilerOptions": {
+    "baseUrl": "src",
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "paths": {
+      "@/*": ["*"]
     },
-    "ecmaVersion": 2021,
-    "sourceType": "module"
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "types": [
+      "node",
+      "jest",
+      "@testing-library/jest-dom",
+      "cypress-plugin-stripe-elements"
+    ],
+    "incremental": true
   },
-  "plugins": [
-    "react",
-    "react-hooks",
-    "testing-library",
-    "cypress",
-    "prettier",
-    "@typescript-eslint"
+  "exclude": [
+    "node_modules",
+    "cypress"
   ],
-  "rules": {
-    "react/prop-types": "off",
-    "react/react-in-jsx-scope": "off",
-    "prettier/prettier": "error",
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@typescript-eslint/no-non-null-assertion": "off"
-  },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  }
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ]
 }
