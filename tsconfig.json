@@ -25,7 +25,8 @@
       "node",
       "jest",
       "@testing-library/jest-dom",
-      "cypress-plugin-stripe-elements"
+      "cypress-plugin-stripe-elements",
+      "cypress",
     ],
     "incremental": true
   },
