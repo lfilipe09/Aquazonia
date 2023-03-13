@@ -6,6 +6,7 @@
     "cypress/globals": true,
     "node": true
   },
+  "ignorePatterns": ["**/*.scss"],
   "extends": [
     "next",
     "next/core-web-vitals",

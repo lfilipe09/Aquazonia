@@ -1,3 +1,5 @@
-const Button = () => <h1>Example</h1>
+import styles from './styles.module.scss'
 
-export default Button
+export default function Button() {
+  return <h1 className={styles.btn}>Example123</h1>
+}
