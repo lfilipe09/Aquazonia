@@ -19,9 +19,9 @@
     }
   },
   "lint-staged": {
-    "src/**/*": [
+    "**/*.{ts,tsx,js}": [
       "yarn lint --fix",
-      "yarn test --findRelatedTests --bail"
+      "yarn test --findRelatedTests --bail --passWithNoTests"
     ]
   },
   "dependencies": {

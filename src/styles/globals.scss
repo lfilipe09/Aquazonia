@@ -1,0 +1,130 @@
+/* piazzolla-200 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Piazzolla';
+  font-style: normal;
+  font-weight: 200;
+  src: url('/fonts/piazzolla-v29-latin-200.woff2') format('woff2'); /* Super Modern Browsers */
+}
+/* piazzolla-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Piazzolla';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/piazzolla-v29-latin-regular.woff2') format('woff2'); /* Super Modern Browsers */
+}
+/* piazzolla-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Piazzolla';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/piazzolla-v29-latin-600.woff2') format('woff2');/* Super Modern Browsers */
+}
+/* piazzolla-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Piazzolla';
+  font-style: normal;
+  font-weight: 800;
+  src: url('/fonts/piazzolla-v29-latin-800.woff2') format('woff2'); /* Super Modern Browsers */
+}
+/* ibm-plex-sans-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/ibm-plex-sans-v14-latin-regular.woff2') format('woff2');/* Super Modern Browsers */
+}
+/* ibm-plex-sans-italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/fonts/ibm-plex-sans-v14-latin-italic.woff2') format('woff2'); /* Super Modern Browsers */
+}
+/* ibm-plex-sans-condensed-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Sans Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/ibm-plex-sans-condensed-v13-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+}
+
+$font-family-base: 'IBM Plex Sans', 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro', 'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+
+$font-weight-light: 200;
+$font-weight-regular: 400;
+$font-weight-bold: 600;
+$font-weight-semi-bold: 800;
+
+$color-navy-blue: #0A4262;
+$color-emerald-green: #83D1BF;
+$color-lime-green: #D4EDBC;
+$color-beige-primary: #BAAA82;
+$color-beige-secondary: #CEC5AF;
+$color-gray: #CFD0C5;
+$color-light-gray: #E4E9DD;
+$color-black: #000000;
+$color-white: #FFFFFF;
+
+$mobile: "(max-width: 767px)";
+$tablet: "(min-width: 768px) and (max-width: 991px)";
+$desktop: "(min-width: 992px)";
+
+
+:root {
+  --text-size-base: 1.7rem;
+  --text-size-heading: 3.6rem;
+  --text-size-nav: 1.8rem;
+  --text-size-eye: 1.4rem;
+  --text-size-title: 2rem;
+  --text-size-map: 1.6rem;
+}
+
+@media #{$desktop} {
+  :root {
+    --text-size-base: 2rem;
+    --text-size-heading: 6rem;
+    --text-size-eye: 3.2rem;
+    --text-size-title: 2.4rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h2 {
+  font-size: var(--text-size-heading);
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: var(--text-size-base);
+  font-weight: $font-weight-regular;
+  color: $color-black;
+}
+
+
+
+
+
+

@@ -6,7 +6,6 @@
     "cypress/globals": true,
     "node": true
   },
-  "ignorePatterns": ["**/*.scss"],
   "extends": [
     "next",
     "next/core-web-vitals",
@@ -44,7 +43,9 @@
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@typescript-eslint/no-non-null-assertion": "off"
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "scss/at-rule-no-unknown": 0,
+    "scss/declaration-no-important": 0
   },
   "settings": {
     "react": {
