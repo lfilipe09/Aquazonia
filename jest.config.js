@@ -12,7 +12,9 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
   modulePaths: ['<rootDir>/src/', '<rootDir>/.jest'],
   moduleNameMapper: {
-    '\\.(css|sass|scss)$': 'identity-obj-proxy'
+    '\\.(css|sass|scss)$': 'identity-obj-proxy',
+    '\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+      '<rootDir>/src/mocks/fileMock.js'
   },
   transform: {
     '^.+\\.[jt]sx?$': 'babel-jest',
