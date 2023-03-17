@@ -1,0 +1,14 @@
+@use "../../styles/variables.scss" as v;
+
+.link{
+  background-color: v.$color-emerald-green;
+  padding: 2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  grid-gap: 5rem;
+  text-decoration: none;
+  color: v.$color-navy-blue;
+  border-radius: 5px;
+}
