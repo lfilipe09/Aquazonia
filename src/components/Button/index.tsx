@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { AnchorHTMLAttributes } from 'react'
 import styles from './styles.module.scss'
 
@@ -7,10 +8,10 @@ export type ButtonProps = {
 } & AnchorHTMLAttributes<HTMLAnchorElement>
 
 const Button = ({ children, icon, url, ...props }: ButtonProps) => (
-  <a href={url} className={styles.link} {...props}>
+  <Link href={url} className={styles.link} {...props} passHref>
     {!!children && <span>{children}</span>}
     {!!icon && icon}
-  </a>
+  </Link>
 )
 
 export default Button

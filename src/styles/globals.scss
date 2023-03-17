@@ -85,6 +85,10 @@ body {
   color: v.$color-black;
 }
 
+.small-hide{
+  display: none;
+}
+
 @media #{v.$desktop} {
   h2 {
     font-size: v.$text-size-heading-desktop;
@@ -93,7 +97,17 @@ body {
   body{
     font-size: v.$text-size-base-desktop;
   }
+
+  .small-hide{
+    display: block;
+  }
+
+  .medium-hide{
+    display: none;
+  }
 }
+
+
 
 
 
