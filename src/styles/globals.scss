@@ -76,24 +76,18 @@ $mobile: "(max-width: 767px)";
 $tablet: "(min-width: 768px) and (max-width: 991px)";
 $desktop: "(min-width: 992px)";
 
+$text-size-base: 1.7rem;
+$text-size-heading: 3.6rem;
+$text-size-nav: 1.8rem;
+$text-size-eye: 1.4rem;
+$text-size-title: 2rem;
+$text-size-map: 1.6rem;
 
-:root {
-  --text-size-base: 1.7rem;
-  --text-size-heading: 3.6rem;
-  --text-size-nav: 1.8rem;
-  --text-size-eye: 1.4rem;
-  --text-size-title: 2rem;
-  --text-size-map: 1.6rem;
-}
+$text-size-base-desktop: 2rem;
+$text-size-heading-desktop: 6rem;
+$text-size-eye-desktop: 3.2rem;
+$text-size-title-desktop: 2.4rem;
 
-@media #{$desktop} {
-  :root {
-    --text-size-base: 2rem;
-    --text-size-heading: 6rem;
-    --text-size-eye: 3.2rem;
-    --text-size-title: 2.4rem;
-  }
-}
 
 * {
   margin: 0;
@@ -113,14 +107,24 @@ html {
 }
 
 h2 {
-  font-size: var(--text-size-heading);
+  font-size: $text-size-heading;
 }
 
 body {
   font-family: $font-family-base;
-  font-size: var(--text-size-base);
+  font-size: $text-size-base;
   font-weight: $font-weight-regular;
   color: $color-black;
+}
+
+@media #{$desktop} {
+  h2 {
+    font-size: $text-size-heading-desktop;
+  }
+
+  body{
+    font-size: $text-size-base-desktop;
+  }
 }
 
 

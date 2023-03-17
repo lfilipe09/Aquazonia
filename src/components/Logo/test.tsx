@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react'
-import './styles.module.scss'
 
 import Logo from '.'
 
