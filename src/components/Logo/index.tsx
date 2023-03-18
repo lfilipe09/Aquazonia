@@ -4,11 +4,10 @@ import serrapilheira from '/public/img/serrapilheira.png'
 
 export type LogoProps = {
   company?: 'Ambiental Media' | 'Serrapilheira'
-  size?: 'large' | 'medium'
 }
 
-const Logo = ({ company = 'Ambiental Media', size = 'medium' }: LogoProps) => (
-  <div data-testid="logo-wrapper" className={styles[`logo-${size}`]}>
+const Logo = ({ company = 'Ambiental Media' }: LogoProps) => (
+  <div data-testid="logo-wrapper" className={styles[`logo-wrapper`]}>
     {company === 'Ambiental Media' ? (
       <svg
         aria-label="ambiental media"
@@ -32,8 +31,8 @@ const Logo = ({ company = 'Ambiental Media', size = 'medium' }: LogoProps) => (
       <Image
         src={serrapilheira}
         alt={`serrapilheira`}
-        width={size === 'large' ? 200 : 150}
-        height={size === 'large' ? 35 : 24}
+        width={200}
+        height={35}
         layout="fixed"
       />
     )}

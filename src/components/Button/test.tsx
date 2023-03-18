@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react'
 import styles from './styles.module.scss'
-import Arrow from '../Icons'
 
 import Button from '.'
+import { Arrow } from '../Icons'
 
 describe('<Button />', () => {
   it('should render the button', () => {

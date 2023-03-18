@@ -1,6 +1,8 @@
+$text-grid-container: 72.6rem;
+$text-grid-gutter: 3.2rem;
+
 $font-family-base: 'IBM Plex Sans', 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro', 'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 $font-family-display: 'Piazzolla', 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro', 'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-
 
 $font-weight-light: 200;
 $font-weight-regular: 400;
@@ -19,7 +21,10 @@ $color-white: #FFFFFF;
 
 $mobile: "(max-width: 767px)";
 $tablet: "(min-width: 768px) and (max-width: 991px)";
+$medium: "(min-width: 768px)";
 $desktop: "(min-width: 992px)";
+$large-device: "(min-width: 1200px)";
+
 
 $text-size-base: 1.7rem;
 $text-size-heading: 3.6rem;

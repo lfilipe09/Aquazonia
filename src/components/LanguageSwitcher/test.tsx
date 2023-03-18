@@ -17,4 +17,13 @@ describe('<LanguageSwitcher />', () => {
     // eslint-disable-next-line testing-library/no-node-access
     expect(screen.getByText(/EN/i).parentElement).toHaveClass('btn-minimalist')
   })
+
+  it('should render the EN selected button', () => {
+    render(<LanguageSwitcher mode="EN" />)
+
+    // eslint-disable-next-line testing-library/no-node-access
+    expect(screen.getByText(/PT/i).parentElement).toHaveClass('btn-minimalist')
+    // eslint-disable-next-line testing-library/no-node-access
+    expect(screen.getByText(/EN/i).parentElement).toHaveClass('btn-selected')
+  })
 })

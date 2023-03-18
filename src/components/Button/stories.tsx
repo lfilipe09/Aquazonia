@@ -1,6 +1,6 @@
 import { Meta, StoryFn } from '@storybook/react'
 import Button, { ButtonProps } from '.'
-import Arrow from '../Icons'
+import { Arrow } from '../Icons'
 
 export default {
   title: 'Button',

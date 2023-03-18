@@ -1,11 +1,17 @@
-.logo-medium{
+@use "../../styles/variables.scss" as v;
+
+.logo-wrapper{
   svg, img{
-    width: 15rem;
+    width: 100%;
+    height: auto;
   }
 }
 
-.logo-large{
-  svg, img{
-    width: 20rem;
+@media #{v.$desktop} {
+  .logo-wrapper{
+    svg, img{
+      width: 20rem;
+      height: auto;
+    }
   }
 }

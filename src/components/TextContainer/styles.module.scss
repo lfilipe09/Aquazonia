@@ -1,0 +1,14 @@
+@use "../../styles/variables.scss" as v;
+
+.section{
+  width: 100%;
+  max-width: v.$text-grid-container;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: calc(v.$text-grid-gutter / 2);
+  padding-right: calc(v.$text-grid-gutter / 2);
+  @media #{v.$large-device} {
+    margin-right: 26rem;
+  }
+}
+ 
