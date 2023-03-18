@@ -22,4 +22,24 @@ describe('<Button />', () => {
     expect(screen.getByText(/buy now/i)).toBeInTheDocument()
     expect(screen.getByTestId('icon')).toBeInTheDocument()
   })
+
+  it('should render a minimalist version', () => {
+    render(
+      <Button mode="minimalist" url={'#'} icon={<Arrow dataTestId="icon" />}>
+        Buy now
+      </Button>
+    )
+
+    expect(screen.getByRole('link')).toHaveClass(styles['btn-minimalist'])
+  })
+
+  it('should render a selected version', () => {
+    render(
+      <Button mode="selected" url={'#'} icon={<Arrow dataTestId="icon" />}>
+        Buy now
+      </Button>
+    )
+
+    expect(screen.getByRole('link')).toHaveClass(styles['btn-selected'])
+  })
 })
