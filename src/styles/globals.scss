@@ -7,7 +7,7 @@
   font-weight: 200;
   src: url('../../public/fonts/piazzolla-v29-latin-200.woff2') format('woff2'); /* Super Modern Browsers */
 }
-/* piazzolla-regular - latin */
+/* piazzolla-regular - latin */ 
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: 'Piazzolla';
@@ -73,16 +73,19 @@ html {
   font-size: 62.5%;
 }
 
-h2 {
-  font-size: v.$text-size-heading;
-  color: v.$color-navy-blue;
-}
-
 body {
   font-family: v.$font-family-base;
   font-size: v.$text-size-base;
   font-weight: v.$font-weight-regular;
   color: v.$color-black;
+}
+
+h2 {
+  font-size: v.$text-size-heading;
+  color: v.$color-navy-blue;
+  font-family: v.$font-family-display;
+  font-weight: 200;
+  line-height: 4.5rem;
 }
 
 .small-hide{
@@ -92,6 +95,7 @@ body {
 @media #{v.$desktop} {
   h2 {
     font-size: v.$text-size-heading-desktop;
+    line-height: 6.4rem;
   }
 
   body{

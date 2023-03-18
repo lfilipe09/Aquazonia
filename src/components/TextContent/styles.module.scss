@@ -1,0 +1,27 @@
+@use "../../styles/variables.scss" as v;
+
+.text-content__section{
+  display: flex;
+  flex-direction: column;
+  grid-gap: 3rem; 
+  @media #{v.$desktop} {
+    grid-gap: 4rem; 
+  }
+  p:first-of-type::first-letter {
+    font-size: 5em;
+    font-weight: 600;
+    color: v.$color-navy-blue;
+    float: left;
+    margin: 0 1rem 0 0;
+    @media #{v.$desktop} {
+      margin: 0 1rem;
+    }
+    line-height: 6.5rem;
+    font-family: v.$font-family-display;
+  }
+  div{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 2rem; 
+  }
+}
