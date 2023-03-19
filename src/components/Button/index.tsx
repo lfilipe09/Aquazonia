@@ -1,29 +1,62 @@
-import Link from 'next/link'
-import { AnchorHTMLAttributes } from 'react'
+import { ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react'
+import Link, { LinkProps } from 'next/link'
 import styles from './styles.module.scss'
 
 export type ButtonProps = {
   icon?: JSX.Element
-  url: string
+  iconPosition?: 'left' | 'right'
+  url?: string
   mode?: 'default' | 'minimalist' | 'selected'
-} & AnchorHTMLAttributes<HTMLAnchorElement>
+  as?: LinkProps['as']
+  negative?: boolean
+} & ButtonHTMLAttributes<HTMLButtonElement> &
+  AnchorHTMLAttributes<HTMLAnchorElement>
 
 const Button = ({
   children,
   icon,
+  iconPosition = 'right',
   url,
   mode = 'default',
+  as,
+  negative,
   ...props
-}: ButtonProps) => (
-  <Link
-    href={url}
-    className={`${styles.link} ${mode !== 'default' && styles[`btn-${mode}`]}`}
-    {...props}
-    passHref
-  >
-    {!!children && <span>{children}</span>}
-    {!!icon && icon}
-  </Link>
-)
+}: ButtonProps) => {
+  if (url) {
+    return (
+      <Link
+        href={url}
+        passHref
+        className={`${styles.link} ${
+          mode !== 'default' && styles[`btn-${mode}`]
+        } ${negative && styles.negative} ${
+          iconPosition === 'left' && styles['btn-icon-left']
+        }`}
+        {...props}
+        as={as}
+      >
+        {!!icon && iconPosition === 'left' && icon}
+        {!!children && <span>{children}</span>}
+        {!!icon && iconPosition === 'right' && icon}
+      </Link>
+    )
+  }
+
+  return (
+    <button
+      type="button"
+      className={`${styles.link} ${
+        mode !== 'default' && styles[`btn-${mode}`]
+      } ${iconPosition === 'left' && styles['btn-icon-left']} ${
+        negative && styles.negative
+      }`}
+      {...props}
+    >
+      {!!icon && iconPosition === 'left' && icon}
+      {!!children && <span>{children}</span>}
+      {!!icon && iconPosition === 'right' && icon}
+    </button>
+  )
+}
 
 export default Button

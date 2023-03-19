@@ -15,3 +15,14 @@ export type RecommendedPost = {
   id: string
   url: string
 }
+
+export type MenuNav = {
+  title?: string
+  id: string
+  height: number
+}
+
+export type RecommendedNav = {
+  title: string
+  url: string
+}

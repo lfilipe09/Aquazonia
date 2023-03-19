@@ -42,4 +42,46 @@ describe('<Button />', () => {
 
     expect(screen.getByRole('link')).toHaveClass(styles['btn-selected'])
   })
+
+  it('should render an icon version with icon on the left', () => {
+    render(
+      <Button url={'#'} icon={<Arrow dataTestId="icon" />} iconPosition="left">
+        Buy now
+      </Button>
+    )
+
+    expect(screen.getByTestId('icon')).toBeInTheDocument()
+    expect(screen.getByRole('link')).toHaveClass(styles.link)
+    expect(screen.getByRole('link')).toHaveClass(styles['btn-icon-left'])
+  })
+
+  it('should render an icon version with icon on the left in a button', () => {
+    render(
+      <Button icon={<Arrow dataTestId="icon" />} iconPosition="left">
+        Buy now
+      </Button>
+    )
+
+    expect(screen.getByTestId('icon')).toBeInTheDocument()
+    expect(screen.getByRole('button')).toHaveClass(styles.link)
+    expect(screen.getByRole('button')).toHaveClass(styles['btn-icon-left'])
+  })
+
+  it('should render a negative version', () => {
+    render(
+      <Button url={'#'} negative>
+        Buy now
+      </Button>
+    )
+
+    expect(screen.getByText(/buy now/i)).toBeInTheDocument()
+    expect(screen.getByRole('link')).toHaveClass(styles.negative)
+  })
+
+  it('should render a negative version in a button', () => {
+    render(<Button negative>Buy now</Button>)
+
+    expect(screen.getByText(/buy now/i)).toBeInTheDocument()
+    expect(screen.getByRole('button')).toHaveClass(styles.negative)
+  })
 })
