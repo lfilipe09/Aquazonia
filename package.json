@@ -25,6 +25,15 @@
     ]
   },
   "dependencies": {
+    "@carto/react-basemaps": "^1.5.1",
+    "@deck.gl/aggregation-layers": "^8.9.3",
+    "@deck.gl/carto": "^8.9.3",
+    "@deck.gl/core": "^8.9.3",
+    "@deck.gl/extensions": "^8.9.3",
+    "@deck.gl/geo-layers": "^8.9.3",
+    "@deck.gl/layers": "^8.9.3",
+    "@deck.gl/mesh-layers": "^8.9.3",
+    "@deck.gl/react": "^8.9.3",
     "@storybook/nextjs": "^7.0.0-rc.3",
     "@types/node": "18.15.0",
     "@types/react": "18.0.28",
@@ -35,6 +44,7 @@
     "node-sass": "^8.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-map-gl": "5.3.11",
     "sass": "^1.59.3",
     "typescript": "4.9.5"
   },
