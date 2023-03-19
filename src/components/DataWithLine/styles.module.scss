@@ -1,0 +1,48 @@
+@use "../../styles/variables.scss" as v;
+
+.data-with-line__wrapper{
+  position: relative;
+  font-family: v.$font-family-display;
+  color: v.$color-navy-blue;
+  padding: 0 1rem;
+  h2{
+    font-size: v.$text-size-eye;
+    line-height: 3.5rem;
+    margin-bottom: 3rem;
+    padding-left: 5rem;
+  }
+  h6{
+    font-size: 6.4rem;
+  }
+  ul{
+    li{
+      list-style: none;
+      padding-left: 5rem;
+    }
+  }
+  @media #{v.$desktop} {
+    padding-left: 14vw;
+    h2{
+      font-size: v.$text-size-eye-desktop;
+      font-weight: 600;
+      line-height: 4.2rem;
+      margin-bottom: 0rem;
+      padding-left: 0rem;
+    }
+    ul{
+      display: flex;
+      grid-gap: 4rem;
+      li{
+        padding-left: 0rem;
+      }
+    }
+    svg{
+      position: absolute;
+      left: 0;
+      top: 2rem;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
