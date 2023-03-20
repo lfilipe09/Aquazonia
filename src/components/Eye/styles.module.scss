@@ -1,0 +1,134 @@
+@use "../../styles/variables.scss" as v;
+
+.eye__wrapper{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 10rem 0;
+  font-size: v.$text-size-eye;
+  font-family: v.$font-family-display;
+  color: v.$color-navy-blue;
+  .eye__image-wrapper{
+    position: relative;
+    padding-left: 1.5rem;
+    .eye__text-wrapper{
+      background-color: v.$color-emerald-green;
+      position: absolute;
+      padding: 4rem 2rem;
+      max-width: 30.6rem;
+      left: 0rem;
+      top: -10rem;
+      span {
+        padding-top: 2rem;
+        font-family: v.$font-family-base;
+        display: block;
+        font-size: v.$text-size-base;
+      }
+    }
+    .eye--text-wrapper-secondary{
+      background-color: v.$color-beige-secondary;
+    }
+    .eye__image{
+      height: 506px;
+      width: 100%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-top: 30rem;
+    }
+    > p{
+      margin-top: 2rem;
+      position: unset;
+      max-width: 40rem;
+      text-align: left;
+      font-size: 2rem;
+      font-style: italic;
+      color: v.$color-navy-blue;
+      font-size: v.$text-size-base;
+      span{
+        display: block;
+      }
+    }
+  }
+  .eye__image-wrapper.eye__caption-below{
+    .eye__image{
+      height: 250px;
+      margin-top: 40rem;
+    }
+  }
+  .eye__image-wrapper.eye__image-left{
+      .eye__text-wrapper{
+        left: unset;
+        right: 0;
+      }
+  }
+  @media #{v.$desktop} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: v.$text-size-eye-desktop;
+    .eye__image-wrapper{
+      grid-column: 2 / span 1;
+      .eye__text-wrapper{
+        max-width: 63.6rem;
+        left: -50rem;
+        padding: 5rem 10rem;
+        span {
+          font-size: v.$text-size-base-desktop;
+        }
+      }
+      .eye__image{
+        height: 767px;
+        width: 540px;
+        margin-top: 0rem;
+      }
+      > p{
+        position: absolute;
+        text-align: right;
+        bottom: 0;
+        left: -33rem;
+        font-size: v.$text-size-base-desktop;
+      }
+    }
+    .eye__image-wrapper.eye__caption-below{
+      > p{
+        position: unset;
+        max-width: unset;
+        margin-top: 2rem;
+      }
+      .eye__text-wrapper{
+        left: -10rem;
+      }
+      .eye__image{
+        width: 920px;
+        height: 596px;
+        margin-top: 35rem;
+      }
+    }
+    .eye__image-wrapper.eye__image-left{
+      grid-column: unset;
+      .eye__text-wrapper{
+        left: unset;
+        right: -10rem;
+      }
+      > p{
+        text-align: left;
+      }
+    }
+  }
+}
+
+.eye__only-text{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .eye__image-wrapper{
+    padding-left: 0rem;
+    .eye__text-wrapper{
+      position: unset;
+      max-width: 92rem;
+    }
+  }
+  
+}
+

@@ -2,7 +2,7 @@ import { Statistics } from '.'
 
 export const dataWithLineMock: Statistics[] = [
   {
-    highlight: '7 milhões',
+    highlight: '7 mi',
     description: 'de quilômetros quadrados de área, em 8 países'
   },
   {
