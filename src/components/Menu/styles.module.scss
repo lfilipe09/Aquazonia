@@ -2,15 +2,18 @@
 
 .menu-line__wrapper{
   width: fit-content;
-  @media #{v.$desktop} {
+  @media #{v.$large-device} { 
     display: flex;
   }
   flex-direction: column;
-  align-items: center;
+  align-items: center; 
   grid-gap: 3rem;
   position: sticky;
-  top: 0;
+  height: 0;
+  top: 3rem;
+  left: 10rem;
   --after-height: 0%;
+  z-index: 2;
   ul {
     position: relative;
     display: flex;
@@ -120,6 +123,7 @@
   transition: all 0.15s ease-in;
   background-color: transparent;
   border: 0;
+  z-index: 20;
 }
 
 .menu-hamburguer--hidden{
@@ -144,7 +148,7 @@
   pointer-events: all;
   visibility: visible;
   opacity: 1;
-  z-index: 2;
+  z-index: 25;
   overflow: unset;
   transition: all 0.75s cubic-bezier(0.25, 0.1, 0.25, 1.0);
   &::after{
@@ -201,7 +205,7 @@
       }
     }
   }
-  @media #{v.$desktop} {
+  @media #{v.$large-device} {
     display: flex;
     padding-top: 10rem;
     div {
@@ -270,6 +274,7 @@
   overflow: unset;
   padding: 0 2rem 0 6rem;
   transition: all 0.75s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+  z-index: 22;
   &::after{
     content: '';
     border-left: 4px solid v.$color-emerald-green;

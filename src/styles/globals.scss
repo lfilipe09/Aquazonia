@@ -30,7 +30,7 @@
   font-style: normal;
   font-weight: 800;
   src: url('../../public/fonts/piazzolla-v29-latin-800.woff2') format('woff2'); /* Super Modern Browsers */
-}
+} 
 /* ibm-plex-sans-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -71,9 +71,10 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
-body {
+body { 
   font-family: v.$font-family-base;
   font-size: v.$text-size-base;
   font-weight: v.$font-weight-regular;
@@ -92,6 +93,10 @@ h2 {
   display: none;
 }
 
+.small-medium-hide{
+  display: none;
+}
+
 @media #{v.$desktop} {
   h2 {
     font-size: v.$text-size-heading-desktop;
@@ -107,6 +112,16 @@ h2 {
   }
 
   .medium-hide{
+    display: none;
+  }
+}
+
+@media #{v.$large-device} {
+  .small-medium-hide{
+    display: block;
+  }
+
+  .big-hide{
     display: none;
   }
 }

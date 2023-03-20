@@ -14,11 +14,14 @@ const TextContent = ({
   title,
   dataTestId
 }: TextContentProps) => (
-  <section className={styles['text-content__section']}>
+  <section
+    className={`${styles['text-content__section']} ${
+      capitular ? styles['text-content--capitular'] : ''
+    }`}
+  >
     {!!title && <Heading>{title}</Heading>}
     <div
       data-testid={dataTestId}
-      className={capitular ? 'text-content--capitular' : ''}
       dangerouslySetInnerHTML={{ __html: content }}
     />
   </section>

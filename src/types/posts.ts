@@ -1,5 +1,7 @@
+import { StaticImageData } from 'next/image'
+
 export type Image = {
-  src: string
+  src: string | StaticImageData
   alt: string
 }
 

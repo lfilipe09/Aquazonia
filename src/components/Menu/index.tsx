@@ -22,11 +22,10 @@ export type MenuProps = {
 
 const Menu = ({ items, recommendations }: MenuProps) => {
   const ulRef = useRef<HTMLUListElement>(null)
-  const [activeBullet, setActiveBullet] = useState(items[0]?.height)
   const [visible, setVisible] = useState(true)
   const [linkMenuOpened, setLinkMenuOpened] = useState(false)
   const [navMenuOpened, setNavMenuOpened] = useState(false)
-
+  const [activeBullet, setActiveBullet] = useState(items[0]?.height)
   // Use a ref to store the previous scroll position
   const prevScrollPosRef = useRef(0)
 
@@ -44,7 +43,7 @@ const Menu = ({ items, recommendations }: MenuProps) => {
       const percentage =
         window.scrollY / maxHeight >= 0.94
           ? 94
-          : (window.scrollY / maxHeight) * 100 - 10
+          : (window.scrollY / maxHeight) * 100
       ulRef.current?.style.setProperty('--after-height', `${percentage}%`)
 
       //change the active if reach the height of the element
@@ -78,19 +77,21 @@ const Menu = ({ items, recommendations }: MenuProps) => {
       window.removeEventListener('scroll', handleScroll)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [items])
 
   return (
     <>
       <aside
         data-testid={'menu-wrapper'}
-        className={`${styles['menu-line__wrapper']} small-hide`}
+        className={`${styles['menu-line__wrapper']} small-medium-hide`}
       >
         <ul ref={ulRef}>
           {items.map((item) => (
-            <a
+            <Link
               key={item.id}
+              scroll={false}
               data-testid={'menu-item'}
+              href={item.id}
               className={
                 item.height === activeBullet ? styles['link--active'] : ''
               }
@@ -104,7 +105,7 @@ const Menu = ({ items, recommendations }: MenuProps) => {
                 />
                 <p>{item.title}</p>
               </li>
-            </a>
+            </Link>
           ))}
         </ul>
         <button
@@ -117,7 +118,7 @@ const Menu = ({ items, recommendations }: MenuProps) => {
         </button>
       </aside>
       <button
-        className={`${styles['menu-hamburguer']} medium-hide ${
+        className={`${styles['menu-hamburguer']} big-hide ${
           /* istanbul ignore next */
           visible ? '' : styles['menu-hamburguer--hidden']
         }`}
@@ -153,7 +154,7 @@ const Menu = ({ items, recommendations }: MenuProps) => {
             }}
             data-testid={'close-button'}
           >
-            <X className={'medium-hide'} />
+            <X className={'big-hide'} />
           </button>
         </header>
         <div>
@@ -185,15 +186,22 @@ const Menu = ({ items, recommendations }: MenuProps) => {
               }}
               data-testid={'link-menu-close-button'}
             >
-              <X className={'medium-hide'} />
+              <X className={'big-hide'} />
             </button>
           </div>
           {items.map((item) => (
-            <a key={item.id}>
+            <Link
+              onClick={() => {
+                /* istanbul ignore next */
+                setLinkMenuOpened(false)
+              }}
+              href={item.id}
+              key={item.id}
+            >
               <li>
                 <p>{item.title}</p>
               </li>
-            </a>
+            </Link>
           ))}
           <Button
             icon={<Arrow />}

@@ -5,7 +5,6 @@ import { RiverPrimary } from '../Icons'
 import RiverSecondary from '../Icons/RiverSecondary'
 import Logo from '../Logo'
 import styles from './styles.module.scss'
-import '@/styles/variables.scss'
 import Divider from '../Divider'
 import TextContainer from '../TextContainer'
 
@@ -55,7 +54,7 @@ const HeroBanner = ({
   }, [])
 
   return (
-    <>
+    <div>
       <section
         ref={heroBannerRef}
         data-testid={'hero-banner-wrapper'}
@@ -100,7 +99,7 @@ const HeroBanner = ({
         <RiverSecondary className={styles['hero-banner__svg-secondary']} />
       </section>
       <Divider height="200px" mode={dividerMode} />
-    </>
+    </div>
   )
 }
 

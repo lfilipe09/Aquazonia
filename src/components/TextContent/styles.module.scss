@@ -7,6 +7,14 @@
   @media #{v.$desktop} {
     grid-gap: 4rem; 
   }
+  div{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 2rem; 
+  }
+}
+
+.text-content--capitular{
   p:first-of-type::first-letter {
     font-size: 5em;
     font-weight: 600;
@@ -18,10 +26,5 @@
     }
     line-height: 6.5rem;
     font-family: v.$font-family-display;
-  }
-  div{
-    display: flex;
-    flex-direction: column;
-    grid-gap: 2rem; 
   }
 }
