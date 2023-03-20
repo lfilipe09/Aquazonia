@@ -9,7 +9,5 @@ export default {
 export const Basic: StoryFn<DividerProps> = (args) => <Divider {...args} />
 
 Basic.args = {
-  backgroundColor: '#CEC5AF',
-  dividerColor: '#FFFFFF',
   height: '100px'
 }

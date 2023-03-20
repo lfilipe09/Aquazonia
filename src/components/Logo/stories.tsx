@@ -8,12 +8,10 @@ export default {
 
 export const AmbientalMedia: StoryFn<LogoProps> = (args) => <Logo {...args} />
 AmbientalMedia.args = {
-  company: 'Ambiental Media',
-  size: 'large'
+  company: 'Ambiental Media'
 }
 
 export const Serrapilheira: StoryFn<LogoProps> = (args) => <Logo {...args} />
 Serrapilheira.args = {
-  company: 'Serrapilheira',
-  size: 'large'
+  company: 'Serrapilheira'
 }
