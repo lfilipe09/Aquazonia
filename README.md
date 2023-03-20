@@ -63,6 +63,15 @@ Open [http://localhost:3000](http://localhost:3000) in your browser and see the 
 
 In the project, the decision was made to use SCSS modules instead of Styled Components. This choice was motivated by the performance benefits that SCSS modules offer, especially in applications that need to scale. Additionally, SCSS modules allow for greater control over the naming of CSS classes, making it easier to debug and maintain the code in the long term. These factors made SCSS modules the better choice for the project's needs.
 
+## BEM Methodology SCSS
+
+[BEM](https://getbem.com/introduction/), which stands for Block Element Modifier, is a popular methodology for writing modular and reusable CSS code. The BEM methodology helps developers to create a clear and well-organized CSS structure that is easy to maintain and extend over time.
+
+One of the main benefits of using BEM is that it promotes a consistent naming convention for CSS classes, which helps to reduce naming conflicts and improve code clarity. BEM uses a simple naming convention that consists of three parts: the block, the element, and the modifier. This makes it easy to identify the purpose of each CSS class and to understand how it relates to other classes in the codebase.
+
+In addition to promoting consistency and clarity, BEM also helps to improve code reuse by encouraging developers to create modular CSS components that can be used in multiple places across the application. This can lead to a more efficient and maintainable codebase, as well as a better user experience for end-users.
+
+Because of these benefits, I decided to follow the BEM methodology when writing my SCSS code. By using BEM, I was able to create a well-structured and reusable CSS codebase that is easy to maintain and extend over time.
 
 ## Responsiveness
 
